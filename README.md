@@ -72,4 +72,29 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
 
 ⚠️ Assumption
  - A default admin user is pre-created, and all user roles are managed by the admin through API endpoints.
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+ - git clone https://github.com/your-username/finlytics.git
    
+2. Navigate to project
+ - cd finlytics
+   
+3. Install dependencies
+ - npm install
+   
+4. Configure environment variables
+ - Create a .env file in the root directory and add:
+
+  PORT=3000
+  MONGO_URI=your_mongodb_connection
+  JWT_SECRET=your_secret_key
+  
+5. Start the server
+ - node server.js
+ - nodemon server.js (for this you to install nodemon using npm i nodemon)
+ - 
+6. Server will run on
+ - http://localhost:3000
+
