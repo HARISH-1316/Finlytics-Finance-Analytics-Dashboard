@@ -87,9 +87,9 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
   ### 4. Configure environment variables
  - Create a .env file in the root directory and add:
  - Code:
-  PORT=3000
-  MONGO_URI=your_mongodb_connection
-  JWT_SECRET=your_secret_key
+  PORT=3000 
+  MONGO_URI=your_mongodb_connection 
+  JWT_SECRET=your_secret_key 
   
   ### 5. Start the server
  - node server.js
