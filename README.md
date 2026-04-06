@@ -57,9 +57,9 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
 
   - 📁 Records Routes
     - GET    /records&nbsp;&nbsp;&nbsp;→ Get records (role-based)
-    - GET    /records/user/:id&nbsp;&nbsp;&nbsp;→ Get records by user (Admin, Analyst)
-    - GET    /records/search&nbsp;&nbsp;&nbsp;→ Search records
-    - GET    /records/:id&nbsp;&nbsp;&nbsp;→ Get single record
+    - GET    /records/user/:id&nbsp;&nbsp;&nbsp;→Retrieve records for a specific user (Admin and Analyst only)
+    - GET    /records/search&nbsp;&nbsp;&nbsp;→ Search records based on type, category, and date
+    - GET    /records/:id&nbsp;&nbsp;&nbsp;→ Fetch a specific record using its ID
     - POST   /records&nbsp;&nbsp;&nbsp;→ Create record
     - PUT    /records/:id&nbsp;&nbsp;&nbsp;→ Update record (Admin)
     - DELETE /records/:id&nbsp;&nbsp;&nbsp;→ Delete record (Admin)
@@ -72,11 +72,12 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
 
 ## ⚠️ Assumption
  - A default admin user is pre-created, and all user roles are managed by the admin through API endpoints.
+ - Financial records are simple transactions (no currency conversion)
 
 ## ⚙️ Setup Instructions
 
   ### 1. Clone the repository
- - git clone https://github.com/your-username/finlytics.git
+ - git clone https://github.com/HARISH-1316/Finlytics-Finance-Analytics-Dashboard.git
    
   ### 2. Navigate to project
  - cd finlytics
@@ -97,4 +98,12 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
    
   ### 6. Server will run on
  - http://localhost:3000
+   
+## 🚀 Future Improvements
+
+  - Add frontend (React dashboard UI)
+  - Implement pagination and advanced filtering
+  - Add export features (CSV/PDF reports)
+  - Integrate unit and integration testing
+  - Add rate limiting and security enhancements
 
