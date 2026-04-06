@@ -19,18 +19,18 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
 
 3) 📁 Core Functionalities
 
-  ✅ User Management
+  - ✅ User Management
     - Signup & Login
     - Role assignment (Admin only)
     - Activate/Deactivate users
     - Search users by filters
 
-  💰 Records Management (CRUD)
+  - 💰 Records Management (CRUD)
     - Add transactions
     - View records (role-based)
     - Update/Delete records (Admin only)
 
-  📊 Dashboard & Analytics
+  - 📊 Dashboard & Analytics
     - Summary of transactions
     - Category-wise breakdown
     - Monthly trends
