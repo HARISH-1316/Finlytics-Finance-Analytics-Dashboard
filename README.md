@@ -22,8 +22,8 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
   - ✅ User Management
     - Signup & Login
     - Role assignment (Admin only)
-    - Activate/Deactivate users
-    - Search users by filters
+    - Activate/Deactivate users (Admin only)
+    - Search users by filters (Admin, Analyst)
 
   - 💰 Records Management (CRUD)
     - Add transactions
@@ -35,7 +35,6 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
     - Category-wise breakdown
     - Monthly trends
     - Recent transactions  
-    Implemented using MongoDB Aggregation Pipeline.
 
 ## 🛠️ Tech Stack
   - Backend: Node.js, Express.js
@@ -48,27 +47,27 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
 ## 🔑 API Endpoints
 
   - 🔐 Auth Routes
-    - POST   /auth/signup&nbsp;&nbsp;&nbsp;→ Register user
-    - POST   /auth/login&nbsp;&nbsp;&nbsp;→ Login & get JWT
-    - GET    /auth/me&nbsp;&nbsp;&nbsp;→ Get current user
-    - PATCH  /auth/:id/status&nbsp;&nbsp;&nbsp;→ Toggle user status (Admin)
-    - PATCH  /auth/:id/role&nbsp;&nbsp;&nbsp;→ Change user role (Admin)
-    - GET    /auth/search&nbsp;&nbsp;&nbsp;→ Search users (Admin, Analyst)
+    - POST   /auth/signup  → Register user
+    - POST   /auth/login → Login & get JWT
+    - GET    /auth/me → Get current user
+    - PUT  /auth/:id/status → Toggle user status (Admin only)
+    - PUT  /auth/:id/role → Change user role (Admin only)
+    - GET    /auth/search → Search users (Admin, Analyst)
 
   - 📁 Records Routes
-    - GET    /records&nbsp;&nbsp;&nbsp;→ Get records (role-based)
-    - GET    /records/user/:id&nbsp;&nbsp;&nbsp;→Retrieve records for a specific user (Admin and Analyst only)
-    - GET    /records/search&nbsp;&nbsp;&nbsp;→ Search records based on type, category, and date
-    - GET    /records/:id&nbsp;&nbsp;&nbsp;→ Fetch a specific record using its ID
-    - POST   /records&nbsp;&nbsp;&nbsp;→ Create record
-    - PUT    /records/:id&nbsp;&nbsp;&nbsp;→ Update record (Admin)
-    - DELETE /records/:id&nbsp;&nbsp;&nbsp;→ Delete record (Admin)
+    - GET    /records → Get records (role-based)
+    - GET    /records/user/:id →Retrieve records for a specific user (Admin, Analyst)
+    - GET    /records/search → Search records based on type, category, and date (role-based)
+    - GET    /records/:id → Fetch a specific record using its ID (role-based)
+    - POST   /records → Create record
+    - PUT    /records/:id → Update record (Admin only)
+    - DELETE /records/:id → Delete record (Admin only)
 
   - 📊 Dashboard Routes
-    - GET /dashboard/summary &nbsp;&nbsp;&nbsp;    → Financial summary
-    - GET /dashboard/category &nbsp;&nbsp;&nbsp;   → Category-wise breakdown
-    - GET /dashboard/recent    &nbsp;&nbsp;&nbsp;  → Recent transactions
-    - GET /dashboard/trends  &nbsp;&nbsp;&nbsp;    → Monthly trends
+    - GET /dashboard/summary → Financial summary (role-based)
+    - GET /dashboard/category → Category-wise breakdown (role-based)
+    - GET /dashboard/recent → Recent transactions (role-based)
+    - GET /dashboard/trends → Monthly trends (role-based)
 
 ## ⚠️ Assumption
  - A default admin user is pre-created, and all user roles are managed by the admin through API endpoints.
@@ -94,7 +93,7 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
   
   ### 5. Start the server
  - node server.js
- - nodemon server.js (for this you to install nodemon using npm i nodemon)
+ - nodemon server.js (for this you to install nodemon using npm install nodemon)
    
   ### 6. Server will run on
  - http://localhost:3000
