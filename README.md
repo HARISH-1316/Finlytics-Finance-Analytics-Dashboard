@@ -47,7 +47,7 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
 
 🔑 API Endpoints
 
-  🔐 Auth Routes
+  - 🔐 Auth Routes
     - POST   /auth/signup        → Register user
     - POST   /auth/login         → Login & get JWT
     - GET    /auth/me            → Get current user
@@ -55,7 +55,7 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
     - PATCH  /auth/:id/role      → Change user role (Admin)
     - GET    /auth/search        → Search users (Admin, Analyst)
 
-  📁 Records Routes
+  - 📁 Records Routes
     - GET    /records                → Get records (role-based)
     - GET    /records/user/:id       → Get records by user (Admin, Analyst)
     - GET    /records/search         → Search records
@@ -64,7 +64,7 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
     - PUT    /records/:id           → Update record (Admin)
     - DELETE /records/:id           → Delete record (Admin)
 
-  📊 Dashboard Routes
+  - 📊 Dashboard Routes
     - GET /dashboard/summary     → Financial summary
     - GET /dashboard/category    → Category-wise breakdown
     - GET /dashboard/recent      → Recent transactions
