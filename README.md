@@ -97,7 +97,17 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
    
   ### 6. Server will run on
  - http://localhost:3000
-   
+
+## ⚖️ Technical Decisions & Trade-offs
+  -  JWT Authentication
+  - MongoDB with Mongoose
+  - Aggregation Pipeline for Analytics
+  - Role-Based Access Control (RBAC)
+  - MVC-Inspired Structure
+  - Joi Validation
+  - Centralized Error Handling
+  - Environment Variables (.env)
+
 ## 🚀 Future Improvements
 
   - Add frontend (React dashboard UI)
@@ -105,4 +115,3 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
   - Add export features (CSV/PDF reports)
   - Integrate unit and integration testing
   - Add rate limiting and security enhancements
-
