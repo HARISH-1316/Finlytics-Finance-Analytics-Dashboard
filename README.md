@@ -4,20 +4,20 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
 
 🚀 Features
 
-1) 🔐 Authentication & Security
+🔐 Authentication & Security
   - User authentication using JWT (JSON Web Token)
   - Password hashing using bcrypt
   - Environment variables managed using .env
   - Input validation using Joi
   - Centralized error handling using custom middleware
 
-2) 👥 Role-Based Access Control
+👥 Role-Based Access Control
   - There are 3 types of users:
     - Viewer → Access only their own records & dashboard
     - Analyst → Access all records & analytics
     - Admin → Full control (users + records + roles)
 
-3) 📁 Core Functionalities
+📁 Core Functionalities
 
   - ✅ User Management
     - Signup & Login
@@ -37,12 +37,12 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
     - Recent transactions  
     Implemented using MongoDB Aggregation Pipeline.
 
-4) 🛠️ Tech Stack
+🛠️ Tech Stack
   - Backend: Node.js, Express.js
   - Database: MongoDB (Mongoose)
   - Authentication: JWT, bcrypt
   - Validation: Joi
-  - Architecture: MVC Pattern
+  - Architecture: MVC-inspired architecture (Models, Controllers, Routes)
   - Error Handling: Custom middleware (ExpressError, wrapAsync)
 
 🔑 API Endpoints
@@ -64,8 +64,12 @@ A role-based Finance Dashboard Backend API built using Node.js, Express, MongoDB
     - PUT    /records/:id           → Update record (Admin)
     - DELETE /records/:id           → Delete record (Admin)
 
-📊 Dashboard Routes
-- GET /dashboard/summary     → Financial summary
-- GET /dashboard/category    → Category-wise breakdown
-- GET /dashboard/recent      → Recent transactions
-- GET /dashboard/trends      → Monthly trends
+  📊 Dashboard Routes
+    - GET /dashboard/summary     → Financial summary
+    - GET /dashboard/category    → Category-wise breakdown
+    - GET /dashboard/recent      → Recent transactions
+    - GET /dashboard/trends      → Monthly trends
+
+⚠️ Assumption
+ - A default admin user is pre-created, and all user roles are managed by the admin through API endpoints.
+   
